@@ -2,7 +2,7 @@
 active_buttons = 2;
 button_codes = 1,252;
 pulse_width = 5;
-write_codes = true;
+#write_codes = true;
 response_matching = simple_matching;
 scenario_type = trials;
 no_logfile = false;

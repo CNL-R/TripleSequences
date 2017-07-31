@@ -2,6 +2,10 @@
 active_buttons = 2;
 button_codes = 1,252;
 pulse_width = 5;
+#write_codes = true;
+scenario_type = trials;
+no_logfile = false;
+response_matching = simple_matching;
 default_background_color = 50, 50, 50;
 
 #SDL portion (create objects and trials)
@@ -20,7 +24,9 @@ text { caption = "a"; font_size = 20; font_color = 0,255,255;
 picture { text breaktxt; x = 0; y = 0; text counttxt1; x = 0; y = -200;
 } break_pic;
 picture { text fixcross; x = 0; y = 0;} just_fix;
-picture { bitmap vis_stim; x = 0; y = 150;} vis_on;
+picture { text fixcross; x = 0; y = 0;} default;
+picture { bitmap vis_stim; x = 0; y = 150;
+			text fixcross; x=0; y = 0;} vis_on;
 sound { wavefile no_tone;} silent;
 sound { wavefile aud_stim;} aud_on;
 
@@ -38,11 +44,14 @@ trial {
 			stimulus_event {sound aud_on; time = 0;} av_aud_se;
 		} av;
 trial {
-			trial_duration = forever;
-			trial_type = specific_response;
-			terminator_button = 2;
-			stimulus_event {picture break_pic; target_button = 2;} break_se;
-		} break_time;
+	trial_duration = forever;
+	trial_type = specific_response;
+	terminator_button = 2;
+		stimulus_event {
+		picture break_pic;
+		target_button = 2;
+		} break_event;
+	} break_time;
 		
 trial { nothing{}; time = 0; port_code = 253;} pause_off;
 trial { nothing{}; time = 0; port_code = 254;} pause_on;
@@ -64,7 +73,6 @@ array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 # 4 - Mixed Blocks (27 of them)
 
 block_order.shuffle();
-
 string filename; 
 loop
 	int blocknum = 0;
@@ -85,28 +93,31 @@ if block_order[blocknum] == 1 then
 elseif block_order[blocknum] == 2 then
 	stimtype = 2;
 elseif block_order[blocknum] == 3 then
+	stimtype = 3;
+elseif block_order[blocknum] == 4 then
 	filename = filebase + string(blocknum) + ".txt";# Load in stimulus file names from text file
-	array <string> stims[0];				#Create array for all stims listed in file
+	array <int> stims[0];				#Create array for all stims listed in file
 	input_file stimsf = new input_file; #Create input_file object
 	stimsf.open(filename);					#Open file defined at top into input_file object
 	loop
-		string sname = stimsf.get_line();#Read the contents of the file into the stims array
+		int sname = stimsf.get_int();#Read the contents of the file into the stims array
 	until !stimsf.last_succeeded() begin
 		stims.add(sname);
-		sname = stimsf.get_line();
+		sname = stimsf.get_int();
+		
 	end;
 	stimsf.close();							#Close the file
 	int nstims = stims.count();			#number of stimuli to be presented per block`
 	
 	wait_interval(50);
 	pause_off.present();
-	just_fix.present();
+	default.present();
 	wait_interval(1500);
 	
 	loop #portcode logic loop
 		int stimnum = 0;
 	until
-		stimnum == 50
+		stimnum == 57
 	begin
 		stimnum = stimnum + 1;
 		if block_order[blocknum] < 4 then
@@ -118,7 +129,7 @@ elseif block_order[blocknum] == 3 then
 			av_aud_se.set_port_code(block_order[blocknum]+1);
 			av_aud_se.set_event_code(string(block_order[blocknum]+1));	
 		elseif block_order[blocknum] == 4 then
-			stimtype = int(stims[stimnum]);
+			stimtype = stims[stimnum];
 			if stimtype == 1 then
 				aud_se.set_port_code(last+3);
 				aud_se.set_event_code(string(last+3));
@@ -130,7 +141,6 @@ elseif block_order[blocknum] == 3 then
 			elseif stimtype == 3 then
 				av_aud_se.set_port_code(last+9);
 				av_aud_se.set_event_code(string(last+9));	
-				av.present();
 				last = 3
 			end;
 		end;

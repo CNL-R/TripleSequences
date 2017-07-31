@@ -12,16 +12,21 @@ wavefile {filename = "1000_57.wav"; preload = true;} aud_stim;
 wavefile {filename = "silence_57.wav"; preload = true;} no_tone;
 text { caption = "+"; font_size = 16; font_color = 255,255,255; } fixcross;
 
+text { caption = "Take a short break, press the '1' button when you are ready to proceed"; font_size = 20; font_color = 0,255,255;
+} breaktxt;
+text { caption = "a"; font_size = 20; font_color = 0,255,255;
+} counttxt1;
+
 picture { text breaktxt; x = 0; y = 0; text counttxt1; x = 0; y = -200;
 } break_pic;
 picture { text fixcross; x = 0; y = 0;} just_fix;
-			bitmap vis_stim1; x = 0; y = 150;} vis_on;
+picture { bitmap vis_stim; x = 0; y = 150;} vis_on;
 sound { wavefile no_tone;} silent;
-sound { wavefile aud_tone1;} aud_on;
+sound { wavefile aud_stim;} aud_on;
 
 trial {
 			stimulus_event {picture vis_on; time = 0; duration = 52;} vis_se;
-			stimulus_event {sound silent; time = 0;} aud_silent;
+			stimulus_event {sound silent; time = 0;} silent_se;
 		} vis;
 
 trial {
@@ -60,6 +65,7 @@ array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 
 block_order.shuffle();
 
+string filename; 
 loop
 	int blocknum = 0;
 until
@@ -94,7 +100,7 @@ elseif block_order[blocknum] == 3 then
 	
 	wait_interval(50);
 	pause_off.present();
-	fixcross.present();
+	just_fix.present();
 	wait_interval(1500);
 	
 	loop #portcode logic loop
@@ -112,10 +118,10 @@ elseif block_order[blocknum] == 3 then
 			av_aud_se.set_port_code(block_order[blocknum]+1);
 			av_aud_se.set_event_code(string(block_order[blocknum]+1));	
 		elseif block_order[blocknum] == 4 then
-			stimtype = stims[stimnum];
+			stimtype = int(stims[stimnum]);
 			if stimtype == 1 then
 				aud_se.set_port_code(last+3);
-				aud_se.set_event_code(last+3);
+				aud_se.set_event_code(string(last+3));
 				last = 4;
 			elseif stimtype == 2 then
 				silent_se.set_port_code(last+6);
@@ -155,3 +161,4 @@ elseif block_order[blocknum] == 3 then
 	
 end;
 
+end;

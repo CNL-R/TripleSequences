@@ -117,7 +117,7 @@
 <set_def_file></set_def_file>
 <stimulus_list>0</stimulus_list>
 <subject_id></subject_id>
-<subject_id_pol>0</subject_id_pol>
+<subject_id_pol>1</subject_id_pol>
 <video_list>0</video_list>
 <warnings>1</warnings>
 </log>
@@ -128,7 +128,26 @@
 <minpv>19</minpv>
 <nam></nam>
 <one_processor>2</one_processor>
-<oports></oports>
+<oports>
+<p>
+<ama>0</ama>
+<ami>0</ami>
+<at>0</at>
+<dpw>5</dpw>
+<dsdi>0</dsdi>
+<dsi>0</dsi>
+<dsn>Data port</dsn>
+<igm>0</igm>
+<il>0</il>
+<ivm>0</ivm>
+<piai>LPT3</piai>
+<pian>Parallel Port</pian>
+<pihpn>LPT3</pihpn>
+<pindex>3</pindex>
+<rs>1</rs>
+<rt>0</rt>
+</p>
+</oports>
 <out_encrypt_key></out_encrypt_key>
 <pi_list></pi_list>
 <port_devices>
@@ -233,16 +252,6 @@
 <name>Keyboard</name>
 </device>
 <device>
-<device_type>3</device_type>
-<dx_device_type>0</dx_device_type>
-<name>HID Keyboard Device</name>
-</device>
-<device>
-<device_type>3</device_type>
-<dx_device_type>0</dx_device_type>
-<name>HID Keyboard Device 1</name>
-</device>
-<device>
 <abs_axis>
 <dead_zone>0</dead_zone>
 <max>1000</max>
@@ -283,6 +292,11 @@
 <max_raw_pos>65535</max_raw_pos>
 <min_raw_pos>0</min_raw_pos>
 <name>HID-compliant mouse</name>
+</device>
+<device>
+<device_type>3</device_type>
+<dx_device_type>0</dx_device_type>
+<name>HID Keyboard Device</name>
 </device>
 <device>
 <axis>
@@ -696,14 +710,14 @@
 </sct>
 <sde>
 <buffer_length>1000</buffer_length>
-<custom_buf>sec_sw</custom_buf>
+<custom_buf>primary</custom_buf>
 <default>1</default>
-<dup_channels>1</dup_channels>
+<dup_channels>0</dup_channels>
 <ex_period>10</ex_period>
 <halt_on_underrun>1</halt_on_underrun>
 <max_mix_length>50</max_mix_length>
 <min_mix_length>25</min_mix_length>
-<mixer>dx_software</mixer>
+<mixer>custom</mixer>
 <rewind_distance>10</rewind_distance>
 <sh_period>0</sh_period>
 <side_speakers>1</side_speakers>

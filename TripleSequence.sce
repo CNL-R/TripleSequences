@@ -2,7 +2,7 @@
 active_buttons = 2;
 button_codes = 1,252;
 pulse_width = 5;
-#write_codes = true;
+write_codes = true;
 scenario_type = trials;
 no_logfile = false;
 response_matching = simple_matching;
@@ -62,7 +62,7 @@ begin_pcl;
 int stimtype;
 int last;
 string filebase = "block";
-
+array <int> stims[0];				#Create array for all stims listed in file
 
 default.present();
 
@@ -96,7 +96,6 @@ elseif block_order[blocknum] == 3 then
 	stimtype = 3;
 elseif block_order[blocknum] == 4 then
 	filename = filebase + string(blocknum) + ".txt";# Load in stimulus file names from text file
-	array <int> stims[0];				#Create array for all stims listed in file
 	input_file stimsf = new input_file; #Create input_file object
 	stimsf.open(filename);					#Open file defined at top into input_file object
 	loop
@@ -108,42 +107,43 @@ elseif block_order[blocknum] == 4 then
 	end;
 	stimsf.close();							#Close the file
 	int nstims = stims.count();			#number of stimuli to be presented per block`
+end;
+
+wait_interval(50);
+pause_off.present();
+default.present();
+wait_interval(1500);
 	
-	wait_interval(50);
-	pause_off.present();
-	default.present();
-	wait_interval(1500);
-	
-	loop #portcode logic loop
-		int stimnum = 0;
-	until
-		stimnum == 57
-	begin
-		stimnum = stimnum + 1;
-		if block_order[blocknum] < 4 then
-			stimtype = block_order[blocknum];
-			aud_se.set_port_code(block_order[blocknum]+1);
-			aud_se.set_event_code(string(block_order[blocknum]+1));
-			silent_se.set_port_code(block_order[blocknum]+1);
-			silent_se.set_event_code(string(block_order[blocknum]+1));
-			av_aud_se.set_port_code(block_order[blocknum]+1);
-			av_aud_se.set_event_code(string(block_order[blocknum]+1));	
-		elseif block_order[blocknum] == 4 then
-			stimtype = stims[stimnum];
-			if stimtype == 1 then
-				aud_se.set_port_code(last+3);
-				aud_se.set_event_code(string(last+3));
-				last = 4;
-			elseif stimtype == 2 then
-				silent_se.set_port_code(last+6);
-				silent_se.set_event_code(string(last+6));
-				last = 2
-			elseif stimtype == 3 then
-				av_aud_se.set_port_code(last+9);
-				av_aud_se.set_event_code(string(last+9));	
-				last = 3
-			end;
+loop #portcode logic loop
+	int stimnum = 0;
+until
+	stimnum == 57
+begin
+	stimnum = stimnum + 1;
+	if block_order[blocknum] < 4 then
+		stimtype = block_order[blocknum];
+		aud_se.set_port_code(block_order[blocknum]+1);
+		aud_se.set_event_code(string(block_order[blocknum]+1));
+		silent_se.set_port_code(block_order[blocknum]+1);
+		silent_se.set_event_code(string(block_order[blocknum]+1));
+		av_aud_se.set_port_code(block_order[blocknum]+1);
+		av_aud_se.set_event_code(string(block_order[blocknum]+1));	
+	elseif block_order[blocknum] == 4 then
+		stimtype = stims[stimnum];
+		if stimtype == 1 then
+			aud_se.set_port_code(last+3);
+			aud_se.set_event_code(string(last+3));
+			last = 4;
+		elseif stimtype == 2 then
+			silent_se.set_port_code(last+6);
+			silent_se.set_event_code(string(last+6));
+			last = 2
+		elseif stimtype == 3 then
+			av_aud_se.set_port_code(last+9);
+			av_aud_se.set_event_code(string(last+9));	
+			last = 3
 		end;
+	end;
 		
 		#Stimulus presentation loop
 		if stimtype == 1 then
@@ -155,20 +155,18 @@ elseif block_order[blocknum] == 4 then
 		end;
 		term.print(stimnum);
 		term.print("\n");
-	
 		loop
 			int time = clock.time();
 			int isi = random(1000,2500);
 		until
 			clock.time() - time > isi
 		begin
-		end
-	end;
-	
-	wait_interval(50);
-	pause_on.present();
-	wait_interval(50);
-	
+		end;
 end;
+
+wait_interval(50);
+pause_on.present();
+wait_interval(50);
+	
 
 end;

@@ -66,8 +66,7 @@ array <int> stims[0];				#Create array for all stims listed in file
 
 default.present();
 
-#array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
-array <int> block_order[] = {2,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
+array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
 
 # 1 - Pure Visual Block
 # 2 - Pure Auditory Block
@@ -78,7 +77,7 @@ block_order.shuffle();
 string filename; 
 loop
 	int blocknum = 0;
-	#int mixedblocknum = 0;
+	int mixedblocknum = 0;
 until
 	blocknum == block_order.count()+1
 begin
@@ -98,8 +97,9 @@ elseif block_order[blocknum] == 2 then
 elseif block_order[blocknum] == 3 then
 	stimtype = 3;
 elseif block_order[blocknum] == 4 then
-	#mixedblocknum = mixedblocknum + 1;
-	filename = filebase + string(blocknum) + ".txt";# Load in stimulus file names from text file
+	mixedblocknum = mixedblocknum + 1;
+	stims.resize(0);
+	filename = filebase + string(mixedblocknum) + ".txt";# Load in stimulus file names from text file
 	input_file stimsf = new input_file; #Create input_file object
 	stimsf.open(filename);					#Open file defined at top into input_file object
 	loop

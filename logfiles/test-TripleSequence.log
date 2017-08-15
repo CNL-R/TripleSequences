@@ -1,146 +1,183 @@
 Scenario - 
-Logfile written - 08/15/2017 11:53:19
+Logfile written - 08/15/2017 12:37:31
 
 Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
 
-test	1	Response	252	112482	112149	1
-test	3	Sound	3	128307	104	1			0		other	0
-test	4	Sound	7	140507	133	1			0		other	0
-test	5	Sound	13	162705	159	1			0		other	0
-test	6	Sound	12	179704	153	1			0		other	0
-test	7	Sound	6	196203	147	1			0		other	0
-test	8	Sound	10	210502	108	1			0		other	0
-test	9	Sound	8	231400	168	1			0		other	0
-test	10	Sound	5	252199	127	1			0		other	0
-test	11	Sound	13	277597	185	1			0		other	0
-test	12	Sound	9	302895	142	1			0		other	0
-test	13	Sound	11	324594	168	1			0		other	0
-test	14	Sound	6	345192	94	1			0		other	0
-test	15	Sound	7	359091	156	1			0		other	0
-test	16	Sound	7	373590	150	1			0		other	0
-test	17	Sound	10	385789	179	1			0		other	0
-test	17	Response	1	395821	10211	1
-test	18	Sound	11	411588	137	1			0		other	0
-test	18	Response	1	413500	2050	1
-test	19	Sound	12	429086	131	1			0		other	0
-test	19	Response	1	430779	1823	1
-test	20	Sound	12	445085	125	1			0		other	0
-test	20	Response	1	446938	1978	1
-test	21	Sound	12	465584	118	1			0		other	0
-test	21	Response	1	467256	1790	1
-test	22	Sound	9	483982	178	1			0		other	0
-test	22	Response	1	487095	3290	1
-test	23	Sound	8	495082	107	1			0		other	0
-test	23	Response	1	498294	3320	1
-test	23	Response	1	509653	14679	1
-test	23	Response	1	511573	16599	1
-test	23	Response	1	513093	18119	1
-test	23	Response	1	514613	19639	1
-test	24	Sound	5	515080	100	1			0		other	0
-test	24	Response	1	516133	1153	1
-test	24	Response	1	517893	2913	1
-test	24	Response	1	519653	4672	1
-test	24	Response	1	521172	6192	1
-test	24	Response	1	522692	7712	1
-test	24	Response	1	525812	10832	1
-test	25	Response	1	527332	15	1
-test	25	Sound	7	527479	162	1			0		other	0
-test	25	Response	1	528852	1535	1
-test	25	Response	1	530612	3295	1
-test	25	Response	1	532372	5055	1
-test	25	Response	1	533891	6575	1
-test	25	Response	1	535571	8254	1
-test	25	Response	1	537331	10014	1
-test	25	Response	1	539571	12254	1
-test	26	Sound	10	541578	91	1			0		other	0
-test	26	Response	1	542131	643	1
-test	26	Response	1	544531	3043	1
-test	26	Response	1	546291	4803	1
-test	26	Response	1	547810	6323	1
-test	26	Response	1	549410	7923	1
-test	27	Sound	8	555477	153	1			0		other	0
-test	28	Sound	8	573176	180	1			0		other	0
-test	29	Sound	11	590675	173	1			0		other	0
-test	30	Sound	9	606274	101	1			0		other	0
-test	31	Sound	5	628772	93	1			0		other	0
-test	32	Sound	13	650871	185	1			0		other	0
-test	33	Sound	12	676369	176	1			0		other	0
-test	34	Sound	9	698367	168	1			0		other	0
-test	35	Sound	8	714366	163	1			0		other	0
-test	36	Sound	5	726965	91	1			0		other	0
-test	37	Sound	10	740464	87	1			0		other	0
-test	38	Sound	11	761163	113	1			0		other	0
-test	39	Sound	12	775362	141	1			0		other	0
-test	40	Sound	9	795861	134	1			0		other	0
-test	41	Sound	11	808860	129	1			0		other	0
-test	42	Sound	9	831058	154	1			0		other	0
-test	43	Sound	11	852857	113	1			0		other	0
-test	44	Sound	6	866356	109	1			0		other	0
-test	45	Sound	13	888854	100	1			0		other	0
-test	46	Sound	6	912752	159	1			0		other	0
-test	47	Sound	10	935251	151	1			0		other	0
-test	48	Sound	8	950550	112	1			0		other	0
-test	49	Sound	11	967048	106	1			0		other	0
-test	50	Sound	6	985447	166	1			0		other	0
-test	51	Sound	7	1008946	158	1			0		other	0
-test	52	Sound	10	1021245	120	1			0		other	0
-test	53	Sound	11	1043143	179	1			0		other	0
-test	54	Sound	9	1062142	172	1			0		other	0
-test	55	Sound	11	1084740	98	1			0		other	0
-test	56	Sound	6	1099439	126	1			0		other	0
-test	57	Sound	13	1115838	187	1			0		other	0
-test	58	Sound	12	1129637	148	1			0		other	0
-test	59	Sound	6	1140936	111	1			0		other	0
-test	61	Response	252	1269758	112761	1
-test	63	Sound	7	1285626	93	1			0		other	0
-test	64	Sound	7	1305125	86	1			0		other	0
-test	65	Sound	13	1317224	182	1			0		other	0
-test	66	Sound	12	1329823	110	1			0		other	0
-test	67	Sound	6	1341322	106	1			0		other	0
-test	68	Sound	10	1365521	131	1			0		other	0
-test	69	Sound	8	1381219	159	1			0		other	0
-test	70	Sound	5	1399418	186	1			0		other	0
-test	71	Sound	13	1412917	181	1			0		other	0
-test	72	Sound	9	1431916	174	1			0		other	0
-test	73	Sound	11	1452214	134	1			0		other	0
-test	74	Sound	6	1470213	127	1			0		other	0
-test	75	Sound	7	1486912	154	1			0		other	0
-test	76	Sound	7	1509410	146	1			0		other	0
-test	77	Sound	10	1527609	173	1			0		other	0
-test	78	Sound	11	1539608	169	1			0		other	0
-test	79	Sound	12	1560607	162	1			0		other	0
-test	80	Sound	12	1576406	123	1			0		other	0
-test	81	Sound	12	1589405	118	1			0		other	0
-test	82	Sound	9	1602404	114	1			0		other	0
-test	83	Sound	8	1616803	175	1			0		other	0
-test	84	Sound	5	1631102	137	1			0		other	0
-test	85	Sound	7	1652400	96	1			0		other	0
-test	86	Sound	10	1667099	124	1			0		other	0
-test	87	Sound	8	1686498	183	1			0		other	0
-test	88	Sound	8	1704497	177	1			0		other	0
-test	89	Sound	11	1721795	138	1			0		other	0
-test	90	Sound	9	1745294	129	1			0		other	0
-test	91	Sound	5	1767292	121	1			0		other	0
-test	92	Sound	13	1789491	147	1			0		other	0
-test	93	Sound	12	1801690	176	1			0		other	0
-test	94	Sound	9	1819789	103	1			0		other	0
-test	95	Sound	8	1845487	127	1			0		other	0
-test	96	Sound	5	1864685	153	1			0		other	0
-test	97	Sound	10	1889884	178	1			0		other	0
-test	98	Sound	11	1907482	105	1			0		other	0
-test	99	Sound	12	1927381	164	1			0		other	0
-test	100	Sound	9	1951379	156	1			0		other	0
-test	101	Sound	11	1975378	147	1			0		other	0
-test	102	Sound	9	1996576	173	1			0		other	0
-test	103	Sound	11	2020674	98	1			0		other	0
-test	104	Sound	6	2046373	122	1			0		other	0
-test	105	Sound	13	2061371	117	1			0		other	0
-test	106	Sound	6	2078270	177	1			0		other	0
-test	107	Sound	10	2092069	139	1			0		other	0
-test	108	Sound	8	2104069	135	1			0		other	0
-test	109	Sound	11	2125267	161	1			0		other	0
-test	110	Sound	6	2143466	188	1			0		other	0
-test	111	Sound	7	2160265	148	1			0		other	0
-test	112	Sound	10	2181263	141	1			0		other	0
-test	113	Sound	11	2196962	168	1			0		other	0
-test	113	Quit		2211610	14816	NA
+test	1	Response	252	193878	193545	1
+test	3	Sound	3	209900	173	1			0		other	0
+test	4	Sound	7	234398	165	1			0		other	0
+test	5	Sound	7	253397	158	1			0		other	0
+test	6	Sound	10	271896	151	1			0		other	0
+test	6	Response	1	276512	4768	1
+test	7	Sound	8	284695	114	1			0		other	0
+test	7	Response	1	291311	6730	1
+test	8	Sound	11	304393	140	1			0		other	0
+test	9	Sound	12	326292	199	1			0		other	0
+test	10	Sound	12	345090	159	1			0		other	0
+test	11	Sound	6	356390	121	1			0		other	0
+test	12	Sound	13	376588	147	1			0		other	0
+test	13	Sound	12	397087	140	1			0		other	0
+test	14	Sound	6	410886	102	1			0		other	0
+test	15	Sound	10	430284	162	1			0		other	0
+test	16	Sound	8	443883	90	1			0		other	0
+test	17	Sound	5	466582	115	1			0		other	0
+test	17	Response	1	477698	11231	1
+test	17	Response	1	479618	13151	1
+test	18	Response	1	481377	73	1
+test	18	Sound	13	481481	177	1			0		other	0
+test	19	Sound	6	500979	170	1			0		other	0
+test	20	Sound	7	515778	131	1			0		other	0
+test	21	Sound	13	530077	93	1			0		other	0
+test	22	Sound	12	546976	153	1			0		other	0
+test	23	Sound	6	558675	183	1			0		other	0
+test	24	Sound	10	575274	110	1			0		other	0
+test	25	Sound	8	596973	136	1			0		other	0
+test	26	Sound	11	613472	130	1			0		other	0
+test	27	Sound	9	625971	125	1			0		other	0
+test	28	Sound	5	643469	119	1			0		other	0
+test	29	Sound	10	665468	111	1			0		other	0
+test	30	Sound	5	688666	136	1			0		other	0
+test	31	Sound	7	705865	164	1			0		other	0
+test	32	Sound	10	721364	158	1			0		other	0
+test	33	Sound	5	737363	152	1			0		other	0
+test	34	Sound	10	755662	113	1			0		other	0
+test	35	Sound	11	771060	174	1			0		other	0
+test	36	Sound	9	795359	132	1			0		other	0
+test	37	Sound	8	818557	157	1			0		other	0
+test	38	Sound	8	831756	186	1			0		other	0
+test	39	Sound	11	853255	178	1			0		other	0
+test	40	Sound	12	868254	173	1			0		other	0
+test	41	Sound	12	882553	134	1			0		other	0
+test	42	Sound	9	897252	162	1			0		other	0
+test	43	Sound	11	912551	123	1			0		other	0
+test	44	Sound	6	937049	115	1			0		other	0
+test	45	Sound	10	960547	106	1			0		other	0
+test	46	Sound	11	974246	135	1			0		other	0
+test	47	Sound	6	998944	159	1			0		other	0
+test	48	Sound	7	1010644	189	1			0		other	0
+test	49	Sound	13	1027942	149	1			0		other	0
+test	50	Sound	6	1052641	174	1			0		other	0
+test	51	Sound	10	1073739	100	1			0		other	0
+test	52	Sound	11	1085738	95	1			0		other	0
+test	53	Sound	6	1108137	154	1			0		other	0
+test	54	Sound	10	1132835	178	1			0		other	0
+test	55	Sound	8	1148434	106	1			0		other	0
+test	56	Sound	8	1170632	132	1			0		other	0
+test	58	Response	252	1448186	264682	1
+test	59	Response	1	1451706	3019	1
+test	59	Response	1	1452746	4059	1
+test	59	Response	1	1454266	5579	1
+test	59	Response	1	1455866	7179	1
+test	59	Response	1	1457546	8858	1
+test	59	Response	1	1459306	10618	1
+test	59	Response	1	1461066	12378	1
+test	59	Response	1	1462825	14138	1
+test	60	Sound	2	1464012	94	1			0		other	0
+test	60	Response	1	1464345	427	1
+test	60	Response	1	1466105	2187	1
+test	60	Response	1	1467625	3707	1
+test	60	Response	1	1469625	5707	1
+test	60	Response	1	1471145	7227	1
+test	60	Response	1	1475065	11147	1
+test	60	Response	1	1476984	13066	1
+test	60	Response	252	1478984	15066	1
+test	60	Response	1	1479864	15946	1
+test	60	Response	252	1480984	17066	1
+test	60	Response	1	1482024	18106	1
+test	60	Response	252	1483384	19466	1
+test	60	Response	1	1484264	20346	1
+test	61	Sound	2	1485410	153	1			0		other	0
+test	61	Response	252	1485544	286	1
+test	61	Response	1	1486424	1166	1
+test	61	Response	252	1487704	2446	1
+test	61	Response	1	1488344	3086	1
+test	61	Response	252	1489463	4206	1
+test	61	Response	1	1490343	5086	1
+test	62	Sound	2	1497509	82	1			0		other	0
+test	63	Sound	2	1516608	175	1			0		other	0
+test	64	Sound	2	1540906	133	1			0		other	0
+test	65	Sound	2	1563105	159	1			0		other	0
+test	66	Sound	2	1578204	87	1			0		other	0
+test	67	Sound	2	1600802	179	1			0		other	0
+test	68	Sound	2	1619601	139	1			0		other	0
+test	69	Sound	2	1634300	167	1			0		other	0
+test	70	Sound	2	1647799	162	1			0		other	0
+test	71	Sound	2	1665298	156	1			0		other	0
+test	72	Sound	2	1688096	114	1			0		other	0
+test	73	Sound	2	1700795	143	1			0		other	0
+test	74	Sound	2	1716794	137	1			0		other	0
+test	75	Sound	2	1736793	130	1			0		other	0
+test	76	Sound	2	1749992	159	1			0		other	0
+test	77	Sound	2	1767291	119	1			0		other	0
+test	78	Sound	2	1780190	181	1			0		other	0
+test	79	Sound	2	1800488	141	1			0		other	0
+test	80	Sound	2	1818487	134	1			0		other	0
+test	81	Sound	2	1836186	161	1			0		other	0
+test	82	Sound	2	1850285	90	1			0		other	0
+test	83	Sound	2	1865984	118	1			0		other	0
+test	84	Sound	2	1878983	113	1			0		other	0
+test	85	Sound	2	1902481	105	1			0		other	0
+test	86	Sound	2	1917380	166	1			0		other	0
+test	87	Sound	2	1930179	128	1			0		other	0
+test	88	Sound	2	1942678	124	1			0		other	0
+test	89	Sound	2	1967176	115	1			0		other	0
+test	90	Sound	2	1983575	176	1			0		other	0
+test	91	Sound	2	2001874	136	1			0		other	0
+test	92	Sound	2	2015273	198	1			0		other	0
+test	93	Sound	2	2033072	158	1			0		other	0
+test	94	Sound	2	2056770	183	1			0		other	0
+test	95	Sound	2	2076769	176	1			0		other	0
+test	96	Sound	2	2101567	134	1			0		other	0
+test	97	Sound	2	2119266	161	1			0		other	0
+test	98	Sound	2	2131865	90	1			0		other	0
+test	99	Sound	2	2147264	151	1			0		other	0
+test	100	Sound	2	2159063	113	1			0		other	0
+test	101	Sound	2	2169962	176	1			0		other	0
+test	102	Sound	2	2187961	170	1			0		other	0
+test	103	Sound	2	2205560	97	1			0		other	0
+test	104	Sound	2	2218759	125	1			0		other	0
+test	105	Sound	2	2235158	186	1			0		other	0
+test	106	Sound	2	2257756	111	1			0		other	0
+test	107	Sound	2	2270455	140	1			0		other	0
+test	108	Sound	2	2286454	135	1			0		other	0
+test	109	Sound	2	2299953	130	1			0		other	0
+test	110	Sound	2	2321352	189	1			0		other	0
+test	111	Sound	2	2333251	85	1			0		other	0
+test	112	Sound	2	2354149	144	1			0		other	0
+test	113	Sound	2	2377348	169	1			0		other	0
+test	115	Response	252	2424595	29744	1
+test	116	Response	1	2427875	2775	1
+test	117	Sound	5	2440543	180	1			0		other	0
+test	118	Sound	7	2460542	173	1			0		other	0
+test	119	Sound	7	2476641	100	1			0		other	0
+test	120	Sound	10	2496539	160	1			0		other	0
+test	121	Sound	8	2508239	189	1			0		other	0
+test	122	Sound	11	2522737	184	1			0		other	0
+test	123	Sound	12	2540336	111	1			0		other	0
+test	124	Sound	12	2555035	139	1			0		other	0
+test	125	Sound	6	2567734	168	1			0		other	0
+test	126	Sound	13	2584333	95	1			0		other	0
+test	127	Sound	12	2606032	121	1			0		other	0
+test	128	Sound	6	2630230	146	1			0		other	0
+test	129	Sound	10	2648429	172	1			0		other	0
+test	130	Sound	8	2664228	134	1			0		other	0
+test	131	Sound	5	2685726	126	1			0		other	0
+test	132	Sound	13	2697225	122	1			0		other	0
+test	133	Sound	6	2716424	148	1			0		other	0
+test	134	Sound	7	2729223	110	1			0		other	0
+test	135	Sound	13	2747222	104	1			0		other	0
+test	136	Sound	12	2760921	132	1			0		other	0
+test	137	Sound	6	2774120	161	1			0		other	0
+test	138	Sound	10	2788419	123	1			0		other	0
+test	139	Sound	8	2812917	114	1			0		other	0
+test	140	Sound	11	2827116	142	1			0		other	0
+test	141	Sound	9	2839115	138	1			0		other	0
+test	142	Sound	5	2857914	98	1			0		other	0
+test	143	Sound	10	2874413	92	1			0		other	0
+test	144	Sound	5	2894811	152	1			0		other	0
+test	145	Sound	7	2918610	110	1			0		other	0
+test	146	Sound	10	2941308	135	1			0		other	0
+test	147	Sound	5	2957507	163	1			0		other	0
+test	148	Sound	10	2975806	123	1			0		other	0
+test	149	Sound	11	2993804	116	1			0		other	0
+test	149	Quit		3005274	11586	NA

@@ -66,7 +66,9 @@ array <int> stims[0];				#Create array for all stims listed in file
 
 default.present();
 
-array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
+#array <int> block_order[] = {1,2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
+array <int> block_order[] = {2,2,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
+
 # 1 - Pure Visual Block
 # 2 - Pure Auditory Block
 # 3 - Pure AV Block
@@ -76,6 +78,7 @@ block_order.shuffle();
 string filename; 
 loop
 	int blocknum = 0;
+	#int mixedblocknum = 0;
 until
 	blocknum == block_order.count()+1
 begin
@@ -95,6 +98,7 @@ elseif block_order[blocknum] == 2 then
 elseif block_order[blocknum] == 3 then
 	stimtype = 3;
 elseif block_order[blocknum] == 4 then
+	#mixedblocknum = mixedblocknum + 1;
 	filename = filebase + string(blocknum) + ".txt";# Load in stimulus file names from text file
 	input_file stimsf = new input_file; #Create input_file object
 	stimsf.open(filename);					#Open file defined at top into input_file object
@@ -117,7 +121,7 @@ wait_interval(1500);
 loop #portcode logic loop
 	int stimnum = 0;
 until
-	stimnum == 57
+	stimnum == 54
 begin
 	stimnum = stimnum + 1;
 	if block_order[blocknum] < 4 then
@@ -157,7 +161,7 @@ begin
 		term.print("\n");
 		loop
 			int time = clock.time();
-			int isi = random(1000,2500);
+			int isi = random(1000,2400);
 		until
 			clock.time() - time > isi
 		begin
